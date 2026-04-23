@@ -14,6 +14,10 @@ export const metadata: Metadata = buildMetadata({
   keywords: ["Jai Club Jaipur", "Jai Club destination", "Jai Club offers"],
 });
 
+metadata.verification = {
+  google: "WHa6cAiZFw2OpDXHq3t02eEhuNLDy4KEk35j9LS00Lk",
+};
+
 const signals = [
   {
     label: "Stay-first design",
