@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F7EFE2"/>
+  <rect x="60" y="60" width="1080" height="510" rx="40" fill="#14382F"/>
+  <circle cx="1030" cy="150" r="140" fill="#C88E3E" fill-opacity="0.18"/>
+  <circle cx="180" cy="500" r="120" fill="#B5583A" fill-opacity="0.18"/>
+  <circle cx="940" cy="420" r="160" stroke="#FFF8ED" stroke-opacity="0.12" stroke-width="2"/>
+  <circle cx="944" cy="424" r="96" stroke="#FFF8ED" stroke-opacity="0.12" stroke-width="2"/>
+  <text x="120" y="220" fill="#FFF8ED" font-family="Georgia, serif" font-size="112" font-weight="700">JAI CLUB</text>
+  <text x="120" y="290" fill="#C88E3E" font-family="Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="8">HOTEL AND ONLINE GAMING</text>
+  <text x="120" y="370" fill="#FFF8ED" font-family="Arial, sans-serif" font-size="34">Boutique stays, member energy, and clear</text>
+  <text x="120" y="415" fill="#FFF8ED" font-family="Arial, sans-serif" font-size="34">internal routes for Jaipur-focused discovery.</text>
+  <circle cx="912" cy="230" r="92" stroke="#FFF8ED" stroke-width="8"/>
+  <path d="M874 160h60v10h-42v50c0 17 10 25 23.5 25 11.7 0 19.4-5.6 24.8-13.8l12.2 10.7c-8.7 13.5-20.8 21.7-40.1 21.7-26.2 0-39.2-15.7-39.2-41.8V160Z" fill="#FFF8ED"/>
+  <path d="M840 208h52" stroke="#C88E3E" stroke-linecap="round" stroke-width="8"/>
+</svg>
