@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Jai Club Hotel | Boutique Stay and Club Lounge Experience",
   description:
     "Jai Club hotel pairs boutique suites, lounge-style dining, and polished arrival flow in Jaipur with direct paths to offers, FAQ, and online gaming.",
-  path: "/hotel",
+  path: "/hotel/",
   keywords: ["Jai Club hotel", "Jai Club stay", "Jaipur boutique hotel"],
 });
 
@@ -53,19 +53,19 @@ const guestFits = [
 
 const relatedLinks = [
   {
-    href: "/offers",
+    href: "/offers/",
     title: "Jai Club offers",
     description: "Move from the hotel overview into stay-and-play packages for a closer look at current offers.",
     label: "Compare hotel-led offers",
   },
   {
-    href: "/online-gaming",
+    href: "/online-gaming/",
     title: "Online gaming experience",
     description: "See how the hotel story connects to member lobbies, tournaments, and responsible play.",
     label: "Open online gaming",
   },
   {
-    href: "/contact",
+    href: "/contact/",
     title: "Contact Jai Club",
     description: "Finish the journey on the contact page when you are ready to ask about suites, packages, or partnerships.",
     label: "Go to contact",
@@ -74,14 +74,14 @@ const relatedLinks = [
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", path: "/" },
-  { name: "Hotel", path: "/hotel" },
+  { name: "Hotel", path: "/hotel/" },
 ]);
 
 const hotelSchema = {
   "@context": "https://schema.org",
   "@type": "Hotel",
   name: `${siteConfig.name} Hotel`,
-  url: absoluteUrl("/hotel"),
+  url: absoluteUrl("/hotel/"),
   description:
     "Jai Club Hotel delivers a boutique Jaipur stay with lounge dining, premium arrival flow, and direct access to connected package and planning pages.",
   address: {
@@ -105,8 +105,8 @@ export default function HotelPage() {
           { label: "Hotel" },
         ]}
         actions={[
-          { href: "/offers", label: "View stay offers" },
-          { href: "/contact", label: "Contact the concierge", variant: "secondary" },
+          { href: "/offers/", label: "View stay offers" },
+          { href: "/contact/", label: "Contact the concierge", variant: "secondary" },
         ]}
         aside={
           <div className="space-y-4">
@@ -175,13 +175,13 @@ export default function HotelPage() {
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/offers"
+                href="/offers/"
                 className="btn btn-primary"
               >
                 Review offers
               </Link>
               <Link
-                href="/online-gaming"
+                href="/online-gaming/"
                 className="btn btn-contrast"
               >
                 Explore online gaming

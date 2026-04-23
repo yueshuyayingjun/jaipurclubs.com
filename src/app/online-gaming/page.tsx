@@ -4,13 +4,13 @@ import { CompassIcon, ShieldIcon, TrophyIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { RelatedLinks } from "@/components/related-links";
-import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Jai Club Online Gaming | Member Lobbies, Tournaments, and Fair Play",
   description:
     "Jai Club online gaming highlights member lobbies, tournament energy, and responsible play guidance with direct paths back to hotel stays, offers, and FAQ.",
-  path: "/online-gaming",
+  path: "/online-gaming/",
   keywords: ["Jai Club online gaming", "Jai Club tournaments", "Jaipur gaming club"],
 });
 
@@ -52,19 +52,19 @@ const principles = [
 
 const relatedLinks = [
   {
-    href: "/hotel",
+    href: "/hotel/",
     title: "Jai Club hotel",
     description: "Return to the stay-led page when you want the hotel overview that anchors the whole brand journey.",
     label: "Back to the hotel",
   },
   {
-    href: "/offers",
+    href: "/offers/",
     title: "Stay and play offers",
     description: "Compare packages that bring room planning, online gaming value, and concierge follow-up together.",
     label: "See package options",
   },
   {
-    href: "/faq",
+    href: "/faq/",
     title: "Access and policy FAQ",
     description: "Use the FAQ for quick clarification on access, planning, and member questions.",
     label: "Open the FAQ",
@@ -73,14 +73,14 @@ const relatedLinks = [
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", path: "/" },
-  { name: "Online Gaming", path: "/online-gaming" },
+  { name: "Online Gaming", path: "/online-gaming/" },
 ]);
 
 const gamingSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Jai Club Online Gaming",
-  url: "https://jaipurclubs.com/online-gaming",
+  url: absoluteUrl("/online-gaming/"),
   description:
     "Jai Club online gaming presents member lobbies, tournament information, and responsible play guidance connected to the hotel and offers pages.",
 };
@@ -98,8 +98,8 @@ export default function OnlineGamingPage() {
           { label: "Online Gaming" },
         ]}
         actions={[
-          { href: "/offers", label: "Compare gaming offers" },
-          { href: "/faq", label: "Read access FAQ", variant: "secondary" },
+          { href: "/offers/", label: "Compare gaming offers" },
+          { href: "/faq/", label: "Read access FAQ", variant: "secondary" },
         ]}
         aside={
           <div className="space-y-4">
@@ -166,13 +166,13 @@ export default function OnlineGamingPage() {
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/offers"
+                href="/offers/"
                 className="btn btn-primary"
               >
                 See the packages
               </Link>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="btn btn-contrast"
               >
                 Contact the gaming desk

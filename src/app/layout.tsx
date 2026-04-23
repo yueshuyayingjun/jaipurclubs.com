@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Jai Club | Hotel and Online Gaming Destination in Jaipur",
     description:
       "Jai Club blends boutique hotel stays, lounge dining, and online gaming experiences into one polished Jaipur destination.",
-    url: siteConfig.url,
+    url: `${siteConfig.url}/`,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",

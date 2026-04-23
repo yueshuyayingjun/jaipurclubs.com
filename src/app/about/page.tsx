@@ -4,13 +4,13 @@ import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { RelatedLinks } from "@/components/related-links";
 import { siteConfig } from "@/lib/site-data";
-import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Jai Club About | Brand Story for Hotel and Online Gaming",
   description:
     "Jai Club explains how its hotel and online gaming identity comes together through premium service, clear planning routes, and a Jaipur-led brand voice.",
-  path: "/about",
+  path: "/about/",
   keywords: ["Jai Club about", "Jai Club brand story", "Jai Club Jaipur"],
 });
 
@@ -34,19 +34,19 @@ const principles = [
 
 const relatedLinks = [
   {
-    href: "/hotel",
+    href: "/hotel/",
     title: "See the hotel experience",
     description: "Move from brand story to the stay-led page if you want the clearest overview of the hospitality offer.",
     label: "Visit hotel",
   },
   {
-    href: "/offers",
+    href: "/offers/",
     title: "See the package offers",
     description: "Open the offers page to understand how Jai Club turns the brand into action-oriented packages.",
     label: "View offers",
   },
   {
-    href: "/contact",
+    href: "/contact/",
     title: "Talk to the team",
     description: "Use the contact page when you are ready to move from brand understanding to a direct conversation.",
     label: "Contact Jai Club",
@@ -55,14 +55,14 @@ const relatedLinks = [
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
+  { name: "About", path: "/about/" },
 ]);
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: siteConfig.name,
-  url: siteConfig.url,
+  url: absoluteUrl("/"),
   description: siteConfig.description,
   email: siteConfig.conciergeEmail,
 };
@@ -80,8 +80,8 @@ export default function AboutPage() {
           { label: "About" },
         ]}
         actions={[
-          { href: "/hotel", label: "Explore the hotel" },
-          { href: "/contact", label: "Contact Jai Club", variant: "secondary" },
+          { href: "/hotel/", label: "Explore the hotel" },
+          { href: "/contact/", label: "Contact Jai Club", variant: "secondary" },
         ]}
         aside={
           <div className="space-y-4">

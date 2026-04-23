@@ -10,25 +10,25 @@ export const metadata: Metadata = buildMetadata({
   title: "Jai Club FAQ | Hotel, Offers, and Online Gaming Questions",
   description:
     "Jai Club FAQ answers common questions about stays, offers, and online gaming so guests can plan with confidence.",
-  path: "/faq",
+  path: "/faq/",
   keywords: ["Jai Club FAQ", "Jai Club questions", "Jai Club hotel FAQ"],
 });
 
 const relatedLinks = [
   {
-    href: "/hotel",
+    href: "/hotel/",
     title: "Return to the hotel page",
     description: "Use the hotel page if your question is really about the stay, arrival flow, or hospitality experience.",
     label: "Back to hotel",
   },
   {
-    href: "/offers",
+    href: "/offers/",
     title: "Review the offers",
     description: "Move to the offers page if your question is about package fit, timings, or member benefits.",
     label: "Visit offers",
   },
   {
-    href: "/contact",
+    href: "/contact/",
     title: "Get a direct answer",
     description: "Use contact when you have a specific request that needs concierge or gaming desk follow-up.",
     label: "Contact Jai Club",
@@ -37,7 +37,7 @@ const relatedLinks = [
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", path: "/" },
-  { name: "FAQ", path: "/faq" },
+  { name: "FAQ", path: "/faq/" },
 ]);
 
 const faqSchema = {
@@ -66,8 +66,8 @@ export default function FaqPage() {
           { label: "FAQ" },
         ]}
         actions={[
-          { href: "/contact", label: "Contact Jai Club" },
-          { href: "/offers", label: "See the offers", variant: "secondary" },
+          { href: "/contact/", label: "Contact Jai Club" },
+          { href: "/offers/", label: "See the offers", variant: "secondary" },
         ]}
         aside={
           <div className="space-y-4">
@@ -107,13 +107,13 @@ export default function FaqPage() {
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/hotel"
+                href="/hotel/"
                 className="btn btn-primary"
               >
                 Explore hotel details
               </Link>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="btn btn-contrast"
               >
                 Ask a direct question

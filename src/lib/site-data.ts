@@ -26,37 +26,37 @@ export const siteConfig = {
 };
 
 export const navigation: NavItem[] = [
-  { href: "/hotel", label: "Hotel" },
-  { href: "/online-gaming", label: "Online Gaming" },
-  { href: "/offers", label: "Offers" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/hotel/", label: "Hotel" },
+  { href: "/online-gaming/", label: "Online Gaming" },
+  { href: "/offers/", label: "Offers" },
+  { href: "/faq/", label: "FAQ" },
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 export const footerGroups = [
   {
     title: "Explore",
     links: [
-      { href: "/hotel", label: "Hotel" },
-      { href: "/online-gaming", label: "Online Gaming" },
-      { href: "/offers", label: "Offers" },
+      { href: "/hotel/", label: "Hotel" },
+      { href: "/online-gaming/", label: "Online Gaming" },
+      { href: "/offers/", label: "Offers" },
     ],
   },
   {
     title: "Plan",
     links: [
-      { href: "/faq", label: "FAQ" },
-      { href: "/contact", label: "Contact" },
-      { href: "/about", label: "About" },
+      { href: "/faq/", label: "FAQ" },
+      { href: "/contact/", label: "Contact" },
+      { href: "/about/", label: "About" },
     ],
   },
   {
     title: "Start",
     links: [
       { href: "/", label: "Homepage" },
-      { href: "/hotel", label: "Stay journey" },
-      { href: "/offers", label: "Package journey" },
+      { href: "/hotel/", label: "Stay journey" },
+      { href: "/offers/", label: "Package journey" },
     ],
   },
 ];

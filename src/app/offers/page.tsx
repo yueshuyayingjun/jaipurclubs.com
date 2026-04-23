@@ -9,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Jai Club Offers | Stay and Play Packages for Hotel and Online Gaming",
   description:
     "Jai Club offers combine boutique hotel stays, online gaming value, and direct concierge routing so visitors can compare packages from one focused page.",
-  path: "/offers",
+  path: "/offers/",
   keywords: ["Jai Club offers", "Jai Club packages", "stay and play Jaipur"],
 });
 
@@ -48,19 +48,19 @@ const packages = [
 
 const relatedLinks = [
   {
-    href: "/hotel",
+    href: "/hotel/",
     title: "Start with the hotel",
     description: "Use the hotel page first if you want to understand the stay experience before comparing packages.",
     label: "Back to hotel",
   },
   {
-    href: "/online-gaming",
+    href: "/online-gaming/",
     title: "Layer in online gaming",
     description: "Move to the gaming page if you want to evaluate tournaments, member access, and responsible play context.",
     label: "Visit online gaming",
   },
   {
-    href: "/contact",
+    href: "/contact/",
     title: "Close with concierge contact",
     description: "Use the contact page when you are ready to discuss package fit, timing, or private requests.",
     label: "Go to contact",
@@ -69,7 +69,7 @@ const relatedLinks = [
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", path: "/" },
-  { name: "Offers", path: "/offers" },
+  { name: "Offers", path: "/offers/" },
 ]);
 
 export default function OffersPage() {
@@ -85,8 +85,8 @@ export default function OffersPage() {
           { label: "Offers" },
         ]}
         actions={[
-          { href: "/contact", label: "Talk to Jai Club" },
-          { href: "/hotel", label: "Review the hotel", variant: "secondary" },
+          { href: "/contact/", label: "Talk to Jai Club" },
+          { href: "/hotel/", label: "Review the hotel", variant: "secondary" },
         ]}
         aside={
           <div className="space-y-4">
@@ -132,13 +132,13 @@ export default function OffersPage() {
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/faq"
+                href="/faq/"
                 className="btn btn-primary"
               >
                 Read the FAQ
               </Link>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="btn btn-contrast"
               >
                 Contact Jai Club

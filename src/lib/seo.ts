@@ -16,8 +16,21 @@ const baseKeywords = [
   "hotel and online gaming",
 ];
 
+function withTrailingSlash(path: string) {
+  if (!path || path === "/") {
+    return "/";
+  }
+
+  if (path.endsWith("/") || /\.[a-z0-9]+$/i.test(path)) {
+    return path;
+  }
+
+  return `${path}/`;
+}
+
 export function absoluteUrl(path: string) {
-  return path === "/" ? siteConfig.url : `${siteConfig.url}${path}`;
+  const normalizedPath = withTrailingSlash(path);
+  return normalizedPath === "/" ? `${siteConfig.url}/` : `${siteConfig.url}${normalizedPath}`;
 }
 
 export function buildMetadata({ title, description, path, keywords = [] }: MetadataInput): Metadata {
@@ -25,7 +38,7 @@ export function buildMetadata({ title, description, path, keywords = [] }: Metad
     title,
     description,
     alternates: {
-      canonical: path,
+      canonical: withTrailingSlash(path),
     },
     keywords: Array.from(new Set([...baseKeywords, ...keywords])),
     openGraph: {

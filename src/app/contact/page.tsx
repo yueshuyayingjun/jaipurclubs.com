@@ -11,25 +11,25 @@ export const metadata: Metadata = buildMetadata({
   title: "Jai Club Contact | Speak With the Hotel or Online Gaming Desk",
   description:
     "Jai Club contact gives visitors a direct route to the hotel concierge, gaming desk, and final planning information after reviewing the main pages.",
-  path: "/contact",
+  path: "/contact/",
   keywords: ["Jai Club contact", "Jai Club concierge", "Jai Club support"],
 });
 
 const relatedLinks = [
   {
-    href: "/hotel",
+    href: "/hotel/",
     title: "Hotel details",
     description: "Go back to the hotel page if you want to refine the stay experience before reaching out.",
     label: "Back to hotel",
   },
   {
-    href: "/online-gaming",
+    href: "/online-gaming/",
     title: "Online gaming page",
     description: "Use the gaming page if your enquiry relates to tournaments, member access, or fair-play positioning.",
     label: "Visit online gaming",
   },
   {
-    href: "/faq",
+    href: "/faq/",
     title: "FAQ page",
     description: "Check the FAQ first if you want a fast answer before starting a direct conversation.",
     label: "Open FAQ",
@@ -38,14 +38,14 @@ const relatedLinks = [
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", path: "/" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact", path: "/contact/" },
 ]);
 
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Jai Club Contact",
-  url: absoluteUrl("/contact"),
+  url: absoluteUrl("/contact/"),
   description:
     "Contact Jai Club for hotel, offer, or online gaming questions through the concierge or gaming desk.",
 };
@@ -63,8 +63,8 @@ export default function ContactPage() {
           { label: "Contact" },
         ]}
         actions={[
-          { href: "/hotel", label: "Review the hotel" },
-          { href: "/offers", label: "Compare packages", variant: "secondary" },
+          { href: "/hotel/", label: "Review the hotel" },
+          { href: "/offers/", label: "Compare packages", variant: "secondary" },
         ]}
         aside={
           <div className="space-y-4">
@@ -107,7 +107,7 @@ export default function ContactPage() {
             <div className="space-y-4">
               <span className="eyebrow border-white/12 bg-white/6 text-[var(--brand-gold)]">Direct Domain</span>
               <h2 className="font-display text-4xl leading-tight text-balance sm:text-5xl">
-                Start your direct route here: https://jaipurclubs.com
+                Start your direct route here: https://jaipurclubs.com/
               </h2>
               <p className="max-w-2xl text-base leading-8 text-white/75">
                 Use the homepage for the main overview, then jump into hotel stays, online gaming, offers, or the FAQ based on what you need next.

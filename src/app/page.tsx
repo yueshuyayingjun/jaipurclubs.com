@@ -34,7 +34,7 @@ const pillars = [
     title: "Boutique hotel stays",
     description:
       "Discover suites, dining energy, and a club-style arrival flow built for short escapes and longer Jaipur stays.",
-    href: "/hotel",
+    href: "/hotel/",
     label: "Explore the hotel",
     Icon: SuiteIcon,
   },
@@ -42,7 +42,7 @@ const pillars = [
     title: "Online gaming lounge",
     description:
       "See how Jai Club organizes digital play, tournaments, fair-play standards, and member progression in one place.",
-    href: "/online-gaming",
+    href: "/online-gaming/",
     label: "See online gaming",
     Icon: PulseIcon,
   },
@@ -50,7 +50,7 @@ const pillars = [
     title: "Integrated offers",
     description:
       "Move straight into stay-and-play packages that connect room choices, member benefits, and enquiry-ready next steps.",
-    href: "/offers",
+    href: "/offers/",
     label: "Browse offers",
     Icon: SparkIcon,
   },
@@ -94,19 +94,19 @@ const valueCards = [
 
 const relatedLinks = [
   {
-    href: "/hotel",
+    href: "/hotel/",
     title: "Hotel overview",
     description: "Read the room, lounge, and arrival experience that anchors the Jai Club brand.",
     label: "Visit the hotel page",
   },
   {
-    href: "/online-gaming",
+    href: "/online-gaming/",
     title: "Online gaming experience",
     description: "See the lobbies, tournaments, and fair-play guidance before you move into offers.",
     label: "Open the gaming page",
   },
   {
-    href: "/faq",
+    href: "/faq/",
     title: "Planning FAQ",
     description: "Use the FAQ to resolve common stay, package, and access questions in one place.",
     label: "Read the FAQ",
@@ -117,7 +117,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: siteConfig.name,
-  url: siteConfig.url,
+  url: absoluteUrl("/"),
   description: siteConfig.description,
   inLanguage: "en-IN",
 };
@@ -126,7 +126,7 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   name: siteConfig.name,
-  url: siteConfig.url,
+  url: absoluteUrl("/"),
   description:
     "Jai Club is a boutique hotel and online gaming destination in Jaipur, blending stays, lounge dining, and member-focused digital experiences.",
   address: {
@@ -196,13 +196,13 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/hotel"
+                href="/hotel/"
                 className="btn btn-primary"
               >
                 Explore the hotel
               </Link>
               <Link
-                href="/online-gaming"
+                href="/online-gaming/"
                 className="btn btn-secondary"
               >
                 See online gaming
@@ -326,7 +326,7 @@ export default function Home() {
               Each answer helps guests choose the next page that fits their stay, package, or access question.
             </p>
             <Link
-              href="/faq"
+              href="/faq/"
               className="btn btn-primary"
             >
               View the full FAQ
@@ -362,13 +362,13 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/offers"
+                href="/offers/"
                 className="btn btn-primary"
               >
                 Compare offers
               </Link>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="btn btn-contrast"
               >
                 Contact Jai Club
