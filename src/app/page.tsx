@@ -115,6 +115,8 @@ const relatedLinks = [
   },
 ];
 
+const faqPreviewItems = faqItems.slice(0, 3);
+
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -152,6 +154,21 @@ const businessSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${absoluteUrl("/")}#faq-preview`,
+  url: absoluteUrl("/"),
+  mainEntity: faqPreviewItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 function linkJaiClubText(text: string) {
   const parts = text.split("Jai Club");
 
@@ -181,7 +198,7 @@ function linkJaiClubText(text: string) {
 export default function Home() {
   return (
     <>
-      <JsonLd data={[websiteSchema, businessSchema]} />
+      <JsonLd data={[websiteSchema, businessSchema, faqSchema]} />
       <section className="section-wrap pb-14 pt-10 lg:pb-20 lg:pt-16">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.18fr)_minmax(320px,0.82fr)] lg:items-center">
           <div className="animate-rise space-y-8">
@@ -335,7 +352,7 @@ export default function Home() {
             </a>
           </div>
           <div className="grid gap-4">
-            {faqItems.slice(0, 3).map((item) => (
+            {faqPreviewItems.map((item) => (
               <div key={item.question} className="panel-card rounded-[1.75rem] p-5">
                 <h3 className="text-lg font-semibold text-[var(--brand-ink)]">{item.question}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-700">{linkJaiClubText(item.answer)}</p>
