@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { RelatedLinks } from "@/components/related-links";
@@ -131,18 +130,18 @@ export default function OffersPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link
+              <a
                 href="/faq/"
                 className="btn btn-primary"
               >
                 Read the FAQ
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact/"
                 className="btn btn-contrast"
               >
                 Contact Jai Club
-              </Link>
+              </a>
             </div>
           </div>
         </div>

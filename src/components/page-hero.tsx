@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
 import { Breadcrumbs, type BreadcrumbLink } from "@/components/breadcrumbs";
 
 type HeroAction = {
@@ -32,7 +31,7 @@ export function PageHero({ eyebrow, title, summary, crumbs, actions, aside }: Pa
           </div>
           <div className="flex flex-wrap gap-4">
             {actions.map((action) => (
-              <Link
+              <a
                 key={`${action.href}-${action.label}`}
                 href={action.href}
                 className={
@@ -42,7 +41,7 @@ export function PageHero({ eyebrow, title, summary, crumbs, actions, aside }: Pa
                 }
               >
                 {action.label}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type RelatedLink = {
   href: string;
   title: string;
@@ -23,7 +21,7 @@ export function RelatedLinks({ title, summary, links }: RelatedLinksProps) {
       </div>
       <div className="grid gap-6 md:grid-cols-3">
         {links.map((link) => (
-          <Link
+          <a
             key={link.href}
             href={link.href}
             className="panel-card group rounded-[1.9rem] p-6 transition-transform duration-300 hover:-translate-y-1"
@@ -33,7 +31,7 @@ export function RelatedLinks({ title, summary, links }: RelatedLinksProps) {
             <span className="mt-5 inline-flex text-sm font-semibold text-[var(--brand-copper)]">
               {link.label}
             </span>
-          </Link>
+          </a>
         ))}
       </div>
     </section>

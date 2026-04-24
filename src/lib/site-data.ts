@@ -41,6 +41,7 @@ export const footerGroups = [
       { href: "/hotel/", label: "Hotel" },
       { href: "/online-gaming/", label: "Online Gaming" },
       { href: "/offers/", label: "Offers" },
+      { href: "/sitemap/", label: "Sitemap" },
     ],
   },
   {

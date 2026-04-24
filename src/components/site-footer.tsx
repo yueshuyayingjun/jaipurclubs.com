@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { BrandMark } from "@/components/icons";
 import { footerGroups, siteConfig } from "@/lib/site-data";
 
@@ -32,13 +31,13 @@ export function SiteFooter() {
               </h2>
               <div className="space-y-2">
                 {group.links.map((link) => (
-                  <Link
+                  <a
                     key={link.href}
                     href={link.href}
                     className="block text-sm leading-7 text-slate-700 transition-colors duration-300 hover:text-[var(--brand-forest)]"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>

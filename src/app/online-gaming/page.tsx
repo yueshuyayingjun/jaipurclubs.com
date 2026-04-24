@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CompassIcon, ShieldIcon, TrophyIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
@@ -165,18 +164,18 @@ export default function OnlineGamingPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link
+              <a
                 href="/offers/"
                 className="btn btn-primary"
               >
                 See the packages
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact/"
                 className="btn btn-contrast"
               >
                 Contact the gaming desk
-              </Link>
+              </a>
             </div>
           </div>
         </div>

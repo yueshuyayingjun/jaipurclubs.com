@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export type BreadcrumbLink = {
   label: string;
   href?: string;
@@ -18,9 +16,9 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         return (
           <div key={`${item.label}-${index}`} className="flex items-center gap-2">
             {item.href && !isLast ? (
-              <Link href={item.href} className="transition-colors duration-300 hover:text-[var(--brand-forest)]">
+              <a href={item.href} className="transition-colors duration-300 hover:text-[var(--brand-forest)]">
                 {item.label}
-              </Link>
+              </a>
             ) : (
               <span className={isLast ? "font-semibold text-[var(--brand-forest)]" : undefined}>{item.label}</span>
             )}

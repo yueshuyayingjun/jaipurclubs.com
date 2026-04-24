@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CompassIcon, PulseIcon, ShieldIcon, SparkIcon, SuiteIcon, TrophyIcon } from "@/components/icons";
 import { JsonLd } from "@/components/json-ld";
 import { RelatedLinks } from "@/components/related-links";
@@ -162,13 +161,13 @@ function linkJaiClubText(text: string) {
 
     if (index > 0) {
       nodes.push(
-        <Link
+        <a
           key={`jai-club-link-${index}`}
           href="/"
           className="font-semibold text-[var(--brand-forest)] underline decoration-[rgba(20,56,47,0.28)] underline-offset-4 transition-colors hover:text-[var(--brand-copper)]"
         >
           Jai Club
-        </Link>,
+        </a>,
       );
     }
 
@@ -199,18 +198,18 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link
+              <a
                 href="/hotel/"
                 className="btn btn-primary"
               >
                 Explore the hotel
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/online-gaming/"
                 className="btn btn-secondary"
               >
                 See online gaming
-              </Link>
+              </a>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {signals.map((signal) => (
@@ -267,7 +266,7 @@ export default function Home() {
             const Icon = pillar.Icon;
 
             return (
-              <Link
+              <a
                 key={pillar.title}
                 href={pillar.href}
                 className="panel-card group rounded-[2rem] p-7 transition-transform duration-300 hover:-translate-y-1"
@@ -280,7 +279,7 @@ export default function Home() {
                 <span className="mt-6 inline-flex text-sm font-semibold text-[var(--brand-copper)]">
                   {pillar.label}
                 </span>
-              </Link>
+              </a>
             );
           })}
         </div>
@@ -329,12 +328,12 @@ export default function Home() {
             <p className="max-w-xl text-base leading-8 text-slate-700">
               Each answer helps guests choose the next page that fits their stay, package, or access question.
             </p>
-            <Link
+            <a
               href="/faq/"
               className="btn btn-primary"
             >
               View the full FAQ
-            </Link>
+            </a>
           </div>
           <div className="grid gap-4">
             {faqItems.slice(0, 3).map((item) => (
@@ -365,18 +364,18 @@ export default function Home() {
               </h2>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link
+              <a
                 href="/offers/"
                 className="btn btn-primary"
               >
                 Compare offers
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact/"
                 className="btn btn-contrast"
               >
                 Contact Jai Club
-              </Link>
+              </a>
             </div>
           </div>
         </div>
