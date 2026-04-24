@@ -19,9 +19,13 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: "Jai Club | Hotel and Online Gaming Destination in Jaipur",
-  description:
-    "Jai Club blends boutique hotel stays, lounge dining, and online gaming experiences into one polished Jaipur destination.",
+  description: siteConfig.description,
   applicationName: siteConfig.name,
+  icons: {
+    icon: [{ url: siteConfig.logoPath, type: "image/webp" }],
+    shortcut: [{ url: siteConfig.logoPath, type: "image/webp" }],
+    apple: [{ url: siteConfig.logoPath, type: "image/webp" }],
+  },
   alternates: {
     canonical: "/",
   },
@@ -34,8 +38,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Jai Club | Hotel and Online Gaming Destination in Jaipur",
-    description:
-      "Jai Club blends boutique hotel stays, lounge dining, and online gaming experiences into one polished Jaipur destination.",
+    description: siteConfig.description,
     url: `${siteConfig.url}/`,
     siteName: siteConfig.name,
     locale: "en_IN",
@@ -45,15 +48,14 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Jai Club hotel and online gaming destination",
+        alt: "Jai Club hotel and online gaming brand preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jai Club | Hotel and Online Gaming Destination in Jaipur",
-    description:
-      "Jai Club blends boutique hotel stays, lounge dining, and online gaming experiences into one polished Jaipur destination.",
+    description: siteConfig.description,
     images: ["/og-image.svg"],
   },
 };

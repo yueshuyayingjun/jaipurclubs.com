@@ -7,8 +7,7 @@ import { absoluteUrl, buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Jai Club | Hotel and Online Gaming Destination in Jaipur",
-  description:
-    "Jai Club brings boutique hotel stays, lounge dining, and online gaming experiences together in Jaipur for guests, members, and private groups.",
+  description: siteConfig.description,
   path: "/",
   keywords: ["Jai Club Jaipur", "Jai Club destination", "Jai Club offers"],
 });

@@ -18,8 +18,10 @@ export type ContactChannel = {
 export const siteConfig = {
   name: "Jai Club",
   url: "https://jaipurclubs.com",
+  logoPath: "/jai%20club%20logo.webp",
+  logoAlt: "Jai Club hotel and online gaming logo",
   description:
-    "Jai Club is a hotel and online gaming destination in Jaipur, pairing boutique stays, lounge dining, and member-focused digital experiences.",
+    "Jai Club is a Jaipur hotel and online gaming destination for boutique stays, lounge dining, and member-led digital play.",
   location: "Jaipur, Rajasthan",
   conciergeEmail: "hello@jaipurclubs.com",
   gamingEmail: "play@jaipurclubs.com",

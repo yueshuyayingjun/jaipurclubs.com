@@ -1,5 +1,4 @@
-import { BrandMark } from "@/components/icons";
-import { navigation } from "@/lib/site-data";
+import { navigation, siteConfig } from "@/lib/site-data";
 
 export function SiteHeader() {
   return (
@@ -7,7 +6,13 @@ export function SiteHeader() {
       <div className="section-wrap py-3 lg:py-4">
         <div className="flex items-center justify-between gap-3 lg:gap-6">
           <a href="/" className="flex min-w-0 items-center gap-3">
-            <BrandMark className="h-10 w-10 shrink-0 text-[var(--brand-forest)] sm:h-11 sm:w-11" />
+            <img
+              src={siteConfig.logoPath}
+              alt={siteConfig.logoAlt}
+              width="44"
+              height="44"
+              className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"
+            />
             <div className="min-w-0">
               <p className="truncate font-display text-2xl leading-none text-[var(--brand-forest)] sm:text-3xl">Jai Club</p>
               <p className="mt-1 hidden text-[0.68rem] font-bold uppercase tracking-[0.28em] text-[var(--brand-copper)] sm:block">

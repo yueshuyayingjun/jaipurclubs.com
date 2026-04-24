@@ -1,4 +1,3 @@
-import { BrandMark } from "@/components/icons";
 import { footerGroups, siteConfig } from "@/lib/site-data";
 
 export function SiteFooter() {
@@ -7,7 +6,13 @@ export function SiteFooter() {
       <div className="section-wrap grid gap-10 py-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <BrandMark className="h-10 w-10 text-[var(--brand-forest)]" />
+            <img
+              src={siteConfig.logoPath}
+              alt={siteConfig.logoAlt}
+              width="40"
+              height="40"
+              className="h-10 w-10 object-contain"
+            />
             <div>
               <p className="font-display text-3xl leading-none text-[var(--brand-forest)]">Jai Club</p>
               <p className="mt-1 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--brand-copper)]">
