@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/site-data";
 import "./globals.css";
+
+const themeInitScript = `(function(){try{var t=localStorage.getItem('site-theme');if(!t){t='light';}document.documentElement.classList.remove('light','dark');document.documentElement.classList.add(t);}catch(e){}})();`;
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -69,9 +73,14 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${manrope.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${manrope.variable} ${cormorant.variable} light h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full" suppressHydrationWarning>
+        <ThemeProvider defaultTheme="light">
         <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
           <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-[radial-gradient(circle,_rgba(200,142,62,0.3),_transparent_68%)] blur-3xl" />
           <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-[radial-gradient(circle,_rgba(181,88,58,0.2),_transparent_72%)] blur-3xl" />
@@ -82,6 +91,8 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );
